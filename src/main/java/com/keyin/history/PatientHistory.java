@@ -13,8 +13,6 @@ public class PatientHistory
         tail = null;
         current = null;
         size = 0;
-
-        loadSampleRecords();
     }
 
     public void addRecord(PatientRecord record)
@@ -100,7 +98,7 @@ public class PatientHistory
     }
 
 
-    private void loadSampleRecords()
+    public void loadSampleRecords()
     {
         addRecord(new PatientRecord("2025-01-01", "Flu", "Rest and fluids"));
         addRecord(new PatientRecord("2025-01-05", "Sprain", "Ice and elevation"));
@@ -112,6 +110,21 @@ public class PatientHistory
         addRecord(new PatientRecord("2025-02-05", "Back Pain", "Physiotherapy"));
         addRecord(new PatientRecord("2025-02-10", "Cold", "Rest and fluids"));
         addRecord(new PatientRecord("2025-02-15", "Follow-up", "Patient improving"));
+    }
+
+    public PatientRecord getCurrentRecord()
+    {
+        if (current == null)
+        {
+            return null;
+        }
+
+        return current.getRecord();
+    }
+
+    public int getSize()
+    {
+        return size;
     }
 }
 

@@ -11,8 +11,6 @@ public class PatientQueue
         this.head = null;
         this.tail = null;
         this.size = 0;
-
-        loadSamplePatients();
     }
 
     public boolean isEmpty()
