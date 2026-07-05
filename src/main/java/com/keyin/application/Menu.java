@@ -5,6 +5,10 @@ import com.keyin.history.*;
 
 import java.util.Scanner;
 
+/**
+ * Main class for the hospital application
+ * Contains a console-based menu to interact with the queue and history systems
+ */
 public class Menu
 {
     private static PatientQueue queue = new PatientQueue();

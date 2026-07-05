@@ -1,11 +1,22 @@
 package com.keyin.queue;
 
+/**
+ * This entity represents a patient in the hospital queue system
+ * Stores patient information such as ID, name, and reason for visit
+ */
 public class Patient
 {
     private long patientId;
     private String name;
     private String reasonForVisit;
 
+    /**
+     * Creates a new patient with the following parameters
+     *
+     * @param patientId id of the patient
+     * @param name the name of the patient
+     * @param reasonForVisit reason the patient is at the hospital
+     */
     public Patient(long patientId, String name, String reasonForVisit)
     {
         this.patientId = patientId;
