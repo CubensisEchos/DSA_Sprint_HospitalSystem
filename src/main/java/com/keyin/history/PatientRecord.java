@@ -6,10 +6,6 @@ public class PatientRecord
     private String diagnosis;
     private String treatmentNotes;
 
-    public PatientRecord()
-    {
-
-    }
 
     public PatientRecord(String visitDate, String diagnosis, String treatmentNotes)
     {

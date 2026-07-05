@@ -11,6 +11,8 @@ public class PatientQueue
         this.head = null;
         this.tail = null;
         this.size = 0;
+
+        loadSamplePatients();
     }
 
     public boolean isEmpty()
@@ -117,6 +119,15 @@ public class PatientQueue
     public int getSize()
     {
         return size;
+    }
+
+    public void loadSamplePatients()
+    {
+        addPatient(new Patient(1, "Jimmy", "Abdominal Pain"));
+        addPatient(new Patient(2, "Sarah", "Headache"));
+        addPatient(new Patient(3, "Alex", "Broken Arm"));
+        addPatient(new Patient(4, "Mia", "Fever"));
+        addPatient(new Patient(5, "Noah", "Chest Pain"));
     }
 }
 

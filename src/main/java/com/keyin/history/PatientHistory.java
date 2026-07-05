@@ -13,6 +13,8 @@ public class PatientHistory
         tail = null;
         current = null;
         size = 0;
+
+        loadSampleRecords();
     }
 
     public void addRecord(PatientRecord record)
@@ -97,15 +99,19 @@ public class PatientHistory
         }
     }
 
-    public void printAllRecords()
-    {
-        PatientRecordNode temp = head;
 
-        while (temp != null)
-        {
-            System.out.println(temp.getRecord());
-            temp = temp.getNext();
-        }
+    private void loadSampleRecords()
+    {
+        addRecord(new PatientRecord("2025-01-01", "Flu", "Rest and fluids"));
+        addRecord(new PatientRecord("2025-01-05", "Sprain", "Ice and elevation"));
+        addRecord(new PatientRecord("2025-01-10", "Fracture", "Cast applied"));
+        addRecord(new PatientRecord("2025-01-15", "Headache", "Pain medication"));
+        addRecord(new PatientRecord("2025-01-20", "Allergy", "Antihistamines"));
+        addRecord(new PatientRecord("2025-01-25", "Infection", "Antibiotics"));
+        addRecord(new PatientRecord("2025-02-01", "Checkup", "Routine examination"));
+        addRecord(new PatientRecord("2025-02-05", "Back Pain", "Physiotherapy"));
+        addRecord(new PatientRecord("2025-02-10", "Cold", "Rest and fluids"));
+        addRecord(new PatientRecord("2025-02-15", "Follow-up", "Patient improving"));
     }
 }
 
