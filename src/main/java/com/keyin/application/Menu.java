@@ -10,9 +10,13 @@ public class Menu
     private static PatientQueue queue = new PatientQueue();
     private static PatientHistory history = new PatientHistory();
 
+
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
+
+        queue.loadSamplePatients();
+        history.loadSampleRecords();
 
         while (true)
         {
