@@ -6,17 +6,6 @@ public class Patient
     private String name;
     private String reasonForVisit;
 
-    public Patient()
-    {
-
-    }
-
-    public Patient(String name, String reasonForVisit)
-    {
-        this.name = name;
-        this.reasonForVisit = reasonForVisit;
-    }
-
     public Patient(long patientId, String name, String reasonForVisit)
     {
         this.patientId = patientId;
