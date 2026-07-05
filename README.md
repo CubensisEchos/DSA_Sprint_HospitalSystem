@@ -19,7 +19,7 @@ iv) testServeEmptyQueue_ReturnsNull()\
 This test creates a empty queue, then it calls servePatient(), and checks that the value returned is null. Then it will check that the queue size is zero.
 
 ### The patient history tests cover:
-i)  testAddRecord_ExpectIncreaseInHistorySize()\
+i) testAddRecord_ExpectIncreaseInHistorySize()\
 This test creates a new history, then adds one record. After that it checks that the size of the history is 1.
 
 ii) testShowOldest_ExpectFirstRecordSetToCurrent()\
@@ -31,7 +31,7 @@ This test creates a new history, then adds two records. Then it runs showNewest(
 iv) testNextRecord_ExpectCurrentRecordSetToNextRecord()\
 This test creates a new history, then adds two records. After that it runs nextRecord(), and will then ensure that the second record it created is the current record.
 
-v)testPreviousRecord_ExpectCurrentRecordSetToPreviousRecord()\
+v) testPreviousRecord_ExpectCurrentRecordSetToPreviousRecord()\
 This test creates a new history, then adds two records. After that it runs previousRecord(), and will then ensure that the first record it created is the current record.
 
 
