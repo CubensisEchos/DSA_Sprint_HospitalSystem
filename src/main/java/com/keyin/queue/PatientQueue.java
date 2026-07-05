@@ -1,5 +1,9 @@
 package com.keyin.queue;
 
+/**
+ * Implements a patient queue using a linked list
+ * Supports standard queue operations and insertion at a chosen position
+ */
 public class PatientQueue
 {
     private PatientNode head;
@@ -18,6 +22,11 @@ public class PatientQueue
         return head == null;
     }
 
+    /**
+     * Adds a patient to the end of the queue
+     *
+     * @param patient the patient to be added
+     */
     public void addPatient(Patient patient)
     {
         PatientNode newNode = new PatientNode(patient);
@@ -35,6 +44,12 @@ public class PatientQueue
         size++;
     }
 
+    /**
+     * Removes and returns the first patient in the queue
+     * Patient that was second in queue because first
+     *
+     * @return the served patient, or null if the queue is empty
+     */
     public Patient servePatient()
     {
         if (isEmpty())
@@ -56,6 +71,13 @@ public class PatientQueue
         return servedPatient;
     }
 
+    /**
+     * Inserts a patient at a chosen position in the queue
+     * Used for patients who need urgent care
+     *
+     * @param position index to insert the patient at
+     * @param patient the patient to be inserted
+     */
     public void insertEmergencyPatient(int position, Patient patient)
     {
         PatientNode newNode = new PatientNode(patient);
@@ -95,6 +117,9 @@ public class PatientQueue
         size++;
     }
 
+    /**
+     * Prints all patients currently in the queue
+     */
     public void printQueue()
     {
         if (isEmpty())
@@ -119,6 +144,9 @@ public class PatientQueue
         return size;
     }
 
+    /**
+     * Loads sample data into the queue for testing
+     */
     public void loadSamplePatients()
     {
         addPatient(new Patient(1, "Jimmy", "Abdominal Pain"));

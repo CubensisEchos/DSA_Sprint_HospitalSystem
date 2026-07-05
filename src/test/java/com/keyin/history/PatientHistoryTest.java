@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class PatientHistoryTest
 {
     @Test
-    public void testAddRecordIncreasesSize()
+    public void testAddRecord_ExpectIncreaseInHistorySize()
     {
         PatientHistory history = new PatientHistory();
 
@@ -16,33 +16,39 @@ public class PatientHistoryTest
     }
 
     @Test
-    public void testShowOldestSetsCurrentRecord()
+    public void testShowOldest_ExpectFirstRecordSetToCurrent()
     {
         PatientHistory history = new PatientHistory();
 
-        history.loadSampleRecords();
+        history.addRecord(new PatientRecord("2025-01-01", "Flu", "Rest"));
+        history.addRecord(new PatientRecord("2025-01-05", "Sprain", "Ice"));
+
         history.showOldest();
 
         Assertions.assertEquals("Flu", history.getCurrentRecord().getDiagnosis());
     }
 
     @Test
-    public void testShowNewestSetsCurrentRecord()
+    public void testShowNewest_ExpectFirstRecordSetToCurrent()
     {
         PatientHistory history = new PatientHistory();
 
-        history.loadSampleRecords();
+        history.addRecord(new PatientRecord("2025-01-01", "Flu", "Rest"));
+        history.addRecord(new PatientRecord("2025-01-05", "Sprain", "Ice"));
+
         history.showNewest();
 
-        Assertions.assertEquals("Follow-up", history.getCurrentRecord().getDiagnosis());
+        Assertions.assertEquals("Sprain", history.getCurrentRecord().getDiagnosis());
     }
 
     @Test
-    public void testNextRecordMovesForward()
+    public void testNextRecord_ExpectCurrentRecordSetToNextRecord()
     {
         PatientHistory history = new PatientHistory();
 
-        history.loadSampleRecords();
+        history.addRecord(new PatientRecord("2025-01-01", "Flu", "Rest"));
+        history.addRecord(new PatientRecord("2025-01-05", "Sprain", "Ice"));
+
         history.showOldest();
         history.nextRecord();
 
@@ -50,14 +56,16 @@ public class PatientHistoryTest
     }
 
     @Test
-    public void testPreviousRecordMovesBackward()
+    public void testPreviousRecord_ExpectCurrentRecordSetToPreviousRecord()
     {
         PatientHistory history = new PatientHistory();
 
-        history.loadSampleRecords();
+        history.addRecord(new PatientRecord("2025-01-01", "Flu", "Rest"));
+        history.addRecord(new PatientRecord("2025-01-05", "Sprain", "Ice"));
+
         history.showNewest();
         history.previousRecord();
 
-        Assertions.assertEquals("Cold", history.getCurrentRecord().getDiagnosis());
+        Assertions.assertEquals("Flu", history.getCurrentRecord().getDiagnosis());
     }
 }

@@ -1,5 +1,9 @@
 package com.keyin.history;
 
+/**
+ * Represents a nod ein the patient history doubly linked list
+ * Stores PatientRecord and links to the next previous nodes
+ */
 public class PatientRecordNode
 {
     private PatientRecord record;

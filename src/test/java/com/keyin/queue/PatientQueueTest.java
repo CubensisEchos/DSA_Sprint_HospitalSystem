@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class PatientQueueTest
 {
     @Test
-    public void testAddPatient()
+    public void testAddPatient_ExpectIncreaseInQueueSize()
     {
         PatientQueue queue = new PatientQueue();
 
@@ -17,7 +17,7 @@ public class PatientQueueTest
     }
 
     @Test
-    public void testServePatient()
+    public void testServePatient_ExpectFirstPatientRemovedFromQueue()
     {
         PatientQueue queue = new PatientQueue();
 
@@ -31,7 +31,7 @@ public class PatientQueueTest
     }
 
     @Test
-    public void testEmergencyInsertAtFront()
+    public void testEmergencyInsert_ExpectPatientPlacedAtFrontOfQueue()
     {
         PatientQueue queue = new PatientQueue();
 
@@ -47,7 +47,7 @@ public class PatientQueueTest
     }
 
     @Test
-    public void testServeEmptyQueueReturnsNull()
+    public void testServeEmptyQueue_ReturnsNull()
     {
         PatientQueue queue = new PatientQueue();
 

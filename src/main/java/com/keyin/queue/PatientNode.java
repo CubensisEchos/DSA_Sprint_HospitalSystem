@@ -1,5 +1,9 @@
 package com.keyin.queue;
 
+/**
+ * Represents a node in the patient queue list
+ * Each node stores a patient and a reference to the connecting nodes
+ */
 public class PatientNode
 {
     private Patient patient;
