@@ -6,32 +6,32 @@ This is my midterm sprint for Data Structures & Algorithms. It contains two syst
 The tests in this project cover the logic within the PatientQueue and PatientHistory files.
 
 ### The patient queue tests cover:
-i) testAddPatient_ExpectIncreaseInQueueSize()
+i) testAddPatient_ExpectIncreaseInQueueSize()\
 This test creates a new queue, then it adds two patients, and then checks that the queue size is two as verifcation.
 
-ii) testServePatient_ExpectFirstPatientRemovedFromQueue()
+ii) testServePatient_ExpectFirstPatientRemovedFromQueue()\
 This test creates a new queue, then it adds two patients, john then sarah. After that it servers the first patient, and checks to see that it is john at the same time. Then it will finally check that the queue size has gone down to 1.
 
-iii) testEmergencyInsert_ExpectPatientPlacedAtFrontOfQueue()
+iii) testEmergencyInsert_ExpectPatientPlacedAtFrontOfQueue()\
 This test creates a new queue, then it adds two patients, inserts an emerency patient to the postion of choice(The front in this case). The it will serve the next patient and checks that it is the patient that was added to the front of the queue.
 
-iv) testServeEmptyQueue_ReturnsNull()
+iv) testServeEmptyQueue_ReturnsNull()\
 This test creates a empty queue, then it calls servePatient(), and checks that the value returned is null. Then it will check that the queue size is zero.
 
 ### The patient history tests cover:
-i)  testAddRecord_ExpectIncreaseInHistorySize()
+i)  testAddRecord_ExpectIncreaseInHistorySize()\
 This test creates a new history, then adds one record. After that it checks that the size of the history is 1.
 
-ii) testShowOldest_ExpectFirstRecordSetToCurrent()
+ii) testShowOldest_ExpectFirstRecordSetToCurrent()\
 This test creates a new history, then adds two records. Then it runs showOldest(), and will then check that the first record that was entered appears as the current record.
 
-iii) testShowNewest_ExpectLastRecordSetToCurrent()
+iii) testShowNewest_ExpectLastRecordSetToCurrent()\
 This test creates a new history, then adds two records. Then it runs showNewest(), and will then check that the last record that was entered appears as the current record.
 
-iv) testNextRecord_ExpectCurrentRecordSetToNextRecord()
+iv) testNextRecord_ExpectCurrentRecordSetToNextRecord()\
 This test creates a new history, then adds two records. After that it runs nextRecord(), and will then ensure that the second record it created is the current record.
 
-v)testPreviousRecord_ExpectCurrentRecordSetToPreviousRecord()
+v)testPreviousRecord_ExpectCurrentRecordSetToPreviousRecord()\
 This test creates a new history, then adds two records. After that it runs previousRecord(), and will then ensure that the first record it created is the current record.
 
 
